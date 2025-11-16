@@ -2,10 +2,17 @@ package pe.com.zzynan.euzin.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
-val Purple80 = Color(0xFFD0BCFF)
-val PurpleGrey80 = Color(0xFFCCC2DC)
-val Pink80 = Color(0xFFEFB8C8)
+val CobaltBlue = Color(0xFF0054B8)
+val DarkBlue = Color(0xFF003A80)
+val SoftBlue = Color(0xFF8CB6EB)
+val White = Color(0xFFFFFFFF)
+val LightGray = Color(0xFFF4F4F4)
+val MediumGray = Color(0xFFA5A5A5)
+val DarkGray = Color(0xFF333333)
+val SuccessGreen = Color(0xFF27AE60)
+val WarningYellow = Color(0xFFF1C40F)
+val ErrorRed = Color(0xFFC0392B)
 
-val Purple40 = Color(0xFF6650a4)
-val PurpleGrey40 = Color(0xFF625b71)
-val Pink40 = Color(0xFF7D5260)
+val BalancePositive = SuccessGreen
+val BalanceNegative = ErrorRed
+val BalanceNeutral = MediumGray
