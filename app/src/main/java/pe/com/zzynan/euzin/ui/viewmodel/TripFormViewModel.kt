@@ -355,10 +355,11 @@ class TripFormViewModel(
             savedStateHandle: SavedStateHandle
         ): androidx.lifecycle.ViewModelProvider.Factory =
             object : androidx.lifecycle.ViewModelProvider.Factory {
-                override fun <T : ViewModel> create(modelClass: Class<T>, extras: androidx.lifecycle.CreationExtras): T {
+                override fun <T : ViewModel> create(modelClass: Class<T>): T {
                     @Suppress("UNCHECKED_CAST")
                     return TripFormViewModel(repository, preferences, savedStateHandle) as T
                 }
             }
     }
+
 }

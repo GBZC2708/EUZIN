@@ -23,7 +23,8 @@ class TripRepositoryImpl(private val database: AppDatabase) : TripRepository {
     override suspend fun getTripByGret(gretNumber: String): TripEntity? = tripDao.getTripByGret(gretNumber)
 
     override suspend fun insertTripWithFuel(trip: TripEntity, fuelEntries: List<FuelEntryEntity>): Long {
-        var tripId: Long
+        var tripId: Long = -1L   // Inicialización obligatoria
+
         database.withTransaction {
             tripId = tripDao.insertTrip(trip)
             val entries = fuelEntries.map { it.copy(tripId = tripId) }
@@ -31,6 +32,7 @@ class TripRepositoryImpl(private val database: AppDatabase) : TripRepository {
         }
         return tripId
     }
+
 
     override suspend fun updateTripWithFuel(trip: TripEntity, fuelEntries: List<FuelEntryEntity>) {
         database.withTransaction {

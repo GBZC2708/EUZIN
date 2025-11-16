@@ -47,7 +47,6 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.ClipboardManager
 import androidx.compose.ui.platform.LocalClipboardManager
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.text.input.KeyboardOptions
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 import kotlinx.coroutines.launch
@@ -57,6 +56,9 @@ import pe.com.zzynan.euzin.ui.theme.BalanceNegative
 import pe.com.zzynan.euzin.ui.theme.BalanceNeutral
 import pe.com.zzynan.euzin.ui.theme.BalancePositive
 import pe.com.zzynan.euzin.ui.viewmodel.TripFormViewModel
+import androidx.compose.foundation.text.KeyboardOptions
+import androidx.compose.material3.ButtonDefaults
+
 
 /**
  * Pantalla de creación/edición de viaje.
@@ -142,7 +144,7 @@ fun TripFormScreen(viewModel: TripFormViewModel, onBack: () -> Unit, onNavigateT
                 item {
                     Button(
                         onClick = { showDeleteConfirm.value = true },
-                        colors = CardDefaults.buttonColors(containerColor = MaterialTheme.colorScheme.error)
+                        colors = ButtonDefaults.buttonColors(containerColor = MaterialTheme.colorScheme.error)
                     ) {
                         Icon(Icons.Default.Delete, contentDescription = null, tint = Color.White)
                         Spacer(modifier = Modifier.width(8.dp))

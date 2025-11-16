@@ -38,10 +38,12 @@ import pe.com.zzynan.euzin.ui.theme.BalanceNegative
 import pe.com.zzynan.euzin.ui.theme.BalanceNeutral
 import pe.com.zzynan.euzin.ui.theme.BalancePositive
 import pe.com.zzynan.euzin.ui.viewmodel.TripListViewModel
+import androidx.compose.material3.ExperimentalMaterial3Api
 
 /**
  * Pantalla de listado de viajes con búsqueda.
  */
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun TripListScreen(
     viewModel: TripListViewModel,

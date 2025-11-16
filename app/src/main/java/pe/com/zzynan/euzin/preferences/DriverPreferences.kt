@@ -36,9 +36,10 @@ class DriverPreferences(private val context: Context) {
         }
 
     suspend fun saveDefaults(name: String, plate: String) {
-        context.dataStore.edit { prefs: Preferences ->
+        context.dataStore.edit { prefs ->
             prefs[driverNameKey] = name
             prefs[truckPlateKey] = plate
         }
     }
+
 }
